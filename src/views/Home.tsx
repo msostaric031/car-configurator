@@ -1,13 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
-import { Home } from 'views';
+import { Header } from 'shared';
 
-function App() {
+export const Home: React.FC = () => {
   return (
     <div>
-      <Home />
+      <Header />
     </div>
   );
-}
-
-export default App;
+};
