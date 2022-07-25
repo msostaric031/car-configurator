@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { Global } from '@emotion/react';
-import styles from 'App.styles';
-import React from 'react';
+import { Route, Routes } from 'react-router';
+import { Layout } from 'shared';
 import { Home } from 'views';
 
 function App() {
   return (
-    <div>
-      <Home />
-      <Global styles={styles.global} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 
