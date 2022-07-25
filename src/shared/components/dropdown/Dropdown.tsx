@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Dropdown.css';
 
 export const Dropdown: React.FC = () => {
@@ -7,7 +8,9 @@ export const Dropdown: React.FC = () => {
       <div className="dropdown">
         <button className="dropbtn">--------</button>
         <div className="dropdown-content">
-          <a href="#">My saved configurations</a>
+          <Link to="/">
+            <a href="#">My saved configurations</a>
+          </Link>
           <a href="#">Logout</a>
         </div>
       </div>

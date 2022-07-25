@@ -23,15 +23,24 @@ const header__btn = css({
   borderColor: 'grey',
   border: '1px solid gray',
 });
-const header__span = css({
+const header__logo = css({
   marginLeft: '80px',
+  textDecoration: 'none',
+  fontSize: '36px',
+  fontWeight: 'bold',
+});
+
+const header__link = css({
+  textDecoration: 'none',
+  color: 'white',
 });
 
 const styles = {
   header,
   header__right,
   header__btn,
-  header__span,
+  header__logo,
+  header__link,
 };
 
 export default styles;
