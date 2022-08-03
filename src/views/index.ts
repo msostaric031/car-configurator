@@ -4,3 +4,4 @@ export * from './Configurator';
 export * from './Exterior';
 export * from './Interior';
 export * from './Summary';
+export * from './Login';
