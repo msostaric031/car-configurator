@@ -4,6 +4,7 @@ const login__btn = css`
   padding: 25px;
   border: none;
   max-width: 180px;
+  border-radius: 15px;
 `;
 
 const login__container = css`
