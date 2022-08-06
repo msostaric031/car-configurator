@@ -20,7 +20,7 @@ export const SavedConfigurations: React.FC = () => {
     const imgPoint = document.getElementById('carImg');
     imgPoint?.setAttribute('src', url);
   });
-
+  console.log(imgRef);
   return (
     <div css={styles.container}>
       <div css={styles.container__header}>
