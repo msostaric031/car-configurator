@@ -24,6 +24,6 @@ const car3Ref = ref(
 
 export const CarList: CarOptionProps[] = [
   { id: 'car1', img: car1Ref, year: 2022, carName: 'Audi RS5' },
-  { id: 'car2', img: car2Ref, year: 2022, carName: 'Audi RS6' },
+  { id: 'car2', img: car2Ref, year: 2022, carName: 'Audi RS6 Avant' },
   { id: 'car3', img: car3Ref, year: 2022, carName: 'Audi e-tron GT' },
 ];

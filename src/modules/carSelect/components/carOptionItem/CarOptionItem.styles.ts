@@ -4,6 +4,10 @@ const container = css`
   margin-right: 20px;
   overflow: hidden;
   max-width: 548px;
+
+  h1 {
+    text-transform: uppercase;
+  }
 `;
 
 const option__img = css`
