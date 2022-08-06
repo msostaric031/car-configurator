@@ -2,6 +2,7 @@
 import { getDownloadURL, ref } from 'firebase/storage';
 import { CarOptionProps } from 'modules/carSelect/types';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CarOptionItem.styles';
 
 export const CarOptionItem: React.FC<CarOptionProps> = ({
@@ -19,7 +20,9 @@ export const CarOptionItem: React.FC<CarOptionProps> = ({
       <img src="" alt="Car picture" id={id} css={styles.option__img} />
       <p>{year}</p>
       <h1>{carName}</h1>
-      <button css={styles.config__btn}>Configure now</button>
+      <Link to="configurator/exterior">
+        <button css={styles.config__btn}>Configure now</button>
+      </Link>
     </div>
   );
 };
