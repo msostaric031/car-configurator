@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-
 import { config } from 'config';
 import { initializeApp } from 'firebase/app';
 import { AuthRoute, Layout } from 'modules';
