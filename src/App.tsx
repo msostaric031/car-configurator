@@ -1,4 +1,6 @@
 /** @jsxImportSource @emotion/react */
+import { Global } from '@emotion/react';
+import styles from 'App.styles';
 import { config } from 'config';
 import { initializeApp } from 'firebase/app';
 import { AuthRoute, Layout } from 'modules';
@@ -19,6 +21,7 @@ initializeApp(config.firebaseConfig);
 function App() {
   return (
     <BrowserRouter>
+      <Global styles={styles.background} />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>
