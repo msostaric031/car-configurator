@@ -20,7 +20,7 @@ export const CarOptionItem: React.FC<CarOptionProps> = ({
       <img src="" alt="Car picture" id={id} css={styles.option__img} />
       <p>{year}</p>
       <h1>{carName}</h1>
-      <Link to="configurator/exterior">
+      <Link to="/configurator/exterior">
         <button css={styles.config__btn}>Configure now</button>
       </Link>
     </div>
