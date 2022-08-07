@@ -4,9 +4,23 @@ const container = css`
   margin-right: 20px;
   overflow: hidden;
   max-width: 548px;
+  background-color: white;
 
   h1 {
     text-transform: uppercase;
+  }
+
+  p {
+    margin: 24px;
+    font-size: 28px;
+    color: gray;
+    font-weight: bold;
+  }
+  h1 {
+    margin: 24px;
+  }
+  button {
+    margin: 24px;
   }
 `;
 
