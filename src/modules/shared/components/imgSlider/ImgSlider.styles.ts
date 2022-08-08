@@ -1,14 +1,18 @@
 import { css } from '@emotion/react';
 
-const container = css``;
-
-const slider__img = css`
-  max-width: 200px;
+const img__container = css`
+  display: flex;
+  max-width: 400px;
+  overflow: hidden;
+`;
+const slider__container = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const styles = {
-  container,
-  slider__img,
+  img__container,
+  slider__container,
 };
-
 export default styles;

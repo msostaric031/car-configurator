@@ -5,7 +5,7 @@ import { Outlet } from 'react-router';
 export const Configurator: React.FC = () => {
   return (
     <div>
-      Configurator
+      <h1>Configurator</h1>
       <ImgSlider />
       <Outlet />
     </div>
