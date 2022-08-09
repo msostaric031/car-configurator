@@ -25,14 +25,16 @@ export const Login: React.FunctionComponent = () => {
 
   return (
     <div css={styles.login__container}>
-      <p>Login Page</p>
-      <button
-        css={styles.login__btn}
-        onClick={() => signInWithGoogle()}
-        disabled={authing}
-      >
-        Sign in with Google
-      </button>
+      <div css={styles.login__wrapper}>
+        <span css={styles.login__txt}>Car configurator</span>
+        <button
+          css={styles.login__btn}
+          onClick={() => signInWithGoogle()}
+          disabled={authing}
+        >
+          Sign in with Google
+        </button>
+      </div>
     </div>
   );
 };
