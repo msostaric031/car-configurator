@@ -13,6 +13,7 @@ import {
   Home,
   Interior,
   Login,
+  Register,
   Summary,
 } from 'views';
 
@@ -24,6 +25,7 @@ function App() {
       <Global styles={styles.background} />
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/" element={<Layout />}>
           <Route
             index

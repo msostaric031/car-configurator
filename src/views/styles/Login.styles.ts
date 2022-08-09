@@ -45,11 +45,30 @@ const login__wrapper = css`
   background-color: whitesmoke;
   box-shadow: 3px 3px 5px 0px rgba(38, 38, 38, 1);
 `;
+
+const login__form = css`
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  margin-bottom: 24px;
+`;
+
+const btn__show = css`
+  border: 1px solid black;
+  border-radius: 2px;
+`;
+
+const txt = css`
+  text-align: center;
+`;
 const styles = {
   login__btn,
   login__container,
   login__wrapper,
   login__txt,
+  login__form,
+  btn__show,
+  txt,
 };
 
 export default styles;

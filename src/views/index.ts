@@ -5,3 +5,4 @@ export * from './Exterior';
 export * from './Interior';
 export * from './Summary';
 export * from './Login';
+export * from './Register';
