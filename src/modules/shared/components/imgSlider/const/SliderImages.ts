@@ -1,12 +1,10 @@
-import { config } from 'config';
-import { initializeApp } from 'firebase/app';
 import { getStorage, ref } from 'firebase/storage';
+import { createFirebase } from 'modules/firebase/InitFirebase';
 import { SliderImageProps } from '../types';
 
-initializeApp(config.firebaseConfig);
+const storage = getStorage(createFirebase());
 
-const storage = getStorage();
-
+// staviti u custom hook
 const imgRef1 = ref(
   storage,
   'gs://car-configurator-117c8.appspot.com/assets/audiRS5/back-1.png',

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { SliderImages } from './const';
 import styles from './ImgSlider.styles';
 import { ImgSliderItem } from './ImgSliderItem';
-
+// react slick
 export const ImgSlider: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const length = SliderImages.length;

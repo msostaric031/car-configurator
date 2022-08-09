@@ -1,9 +1,5 @@
-import { config } from 'config';
-import { initializeApp } from 'firebase/app';
 import { getStorage, ref } from 'firebase/storage';
 import { CarOptionProps } from '../types';
-
-initializeApp(config.firebaseConfig);
 
 const storage = getStorage();
 

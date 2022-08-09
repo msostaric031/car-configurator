@@ -3,10 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './SavedConfigurations.styles';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
-import { initializeApp } from 'firebase/app';
-import { config } from 'config';
-
-initializeApp(config.firebaseConfig);
 
 const storage = getStorage();
 
@@ -16,6 +12,7 @@ const imgRef = ref(
 );
 
 export const SavedConfigurations: React.FC = () => {
+  // const { setImgAtribute } = useCarConfigurator();
   getDownloadURL(ref(imgRef)).then((url) => {
     const imgPoint = document.getElementById('carImg');
     imgPoint?.setAttribute('src', url);

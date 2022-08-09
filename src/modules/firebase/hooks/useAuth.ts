@@ -1,13 +1,8 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
-interface AuthProps {
-  children: React.ReactNode;
-}
-
-export const AuthRoute: React.FC<AuthProps> = (props) => {
-  const { children } = props;
+export function useAuth() {
   const auth = getAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -21,10 +16,8 @@ export const AuthRoute: React.FC<AuthProps> = (props) => {
   });
 
   useEffect(() => {
-    AuthCheck;
-  }, [auth]);
+    AuthCheck();
+  }, []);
 
-  if (loading) return <p>loading ...</p>;
-
-  return <div>{children}</div>;
-};
+  return { loading };
+}
