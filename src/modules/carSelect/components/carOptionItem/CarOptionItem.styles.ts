@@ -8,6 +8,7 @@ const container = css`
 
   h1 {
     text-transform: uppercase;
+    margin: 24px;
   }
 
   p {
@@ -16,9 +17,7 @@ const container = css`
     color: gray;
     font-weight: bold;
   }
-  h1 {
-    margin: 24px;
-  }
+
   button {
     margin: 24px;
   }
@@ -30,10 +29,12 @@ const option__img = css`
   right: 520px;
 `;
 const config__btn = css`
-  padding: 12px 20px;
-  color: white;
-  background-color: #1e1ed2;
-  border: none;
+  button {
+    padding: 12px 20px;
+    color: white;
+    background-color: #1e1ed2;
+    border: none;
+  }
 `;
 
 const styles = {

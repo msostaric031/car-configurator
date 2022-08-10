@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 const container = css`
   position: relative;
   max-width: 1200px;
-  margin: 20px auto 40px auto;
+  margin: 20px auto 40px;
 `;
 
 const container__header = css`

@@ -1,8 +1,6 @@
-import { getStorage, ref } from 'firebase/storage';
-import { createFirebase } from 'modules/firebase/InitFirebase';
+import { ref } from 'firebase/storage';
+import { storage } from 'modules/firebase/InitFirebase';
 import { SliderImageProps } from '../types';
-
-const storage = getStorage(createFirebase());
 
 // staviti u custom hook
 const imgRef1 = ref(

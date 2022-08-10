@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState } from 'react';
 import {
-  getAuth,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -9,9 +8,9 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './styles/Login.styles';
 import { BsEye } from 'react-icons/bs';
+import { auth } from 'modules';
 
 export const Login: React.FunctionComponent = () => {
-  const auth = getAuth();
   const navigate = useNavigate();
   const [authing, setAuthing] = useState(false);
   const [loginEmail, setLoginEmail] = useState('');

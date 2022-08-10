@@ -1,7 +1,6 @@
-import { getStorage, ref } from 'firebase/storage';
+import { ref } from 'firebase/storage';
+import { storage } from 'modules/firebase';
 import { CarOptionProps } from '../types';
-
-const storage = getStorage();
 
 const car1Ref = ref(
   storage,
