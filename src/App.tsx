@@ -33,10 +33,38 @@ function App() {
               }
             />
             <Route path="/carselect" element={<CarSelect />} />
-            <Route path="/configurator" element={<Configurator />} />
-            <Route path="/configurator/exterior" element={<Exterior />} />
-            <Route path="/configurator/interior" element={<Interior />} />
-            <Route path="/configurator/summary" element={<Summary />} />
+            <Route
+              path="/configurator"
+              element={
+                <AuthRoute>
+                  <Configurator />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/exterior"
+              element={
+                <AuthRoute>
+                  <Exterior />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/interior"
+              element={
+                <AuthRoute>
+                  <Interior />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/summary"
+              element={
+                <AuthRoute>
+                  <Summary />
+                </AuthRoute>
+              }
+            />
           </Route>
         </Routes>
       </FirebaseProvider>
