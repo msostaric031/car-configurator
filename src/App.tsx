@@ -1,25 +1,74 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+import { Global } from '@emotion/react';
+import styles from 'App.styles';
+import { AuthRoute, FirebaseProvider, Layout } from 'modules';
+import { Route, Routes } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import {
+  CarSelect,
+  Configurator,
+  Exterior,
+  Home,
+  Interior,
+  Login,
+  Register,
+  Summary,
+} from 'views';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <FirebaseProvider>
+        <Global styles={styles.background} />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Layout />}>
+            <Route
+              index
+              element={
+                <AuthRoute>
+                  <Home />
+                </AuthRoute>
+              }
+            />
+            <Route path="/carselect" element={<CarSelect />} />
+            <Route
+              path="/configurator"
+              element={
+                <AuthRoute>
+                  <Configurator />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/exterior"
+              element={
+                <AuthRoute>
+                  <Exterior />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/interior"
+              element={
+                <AuthRoute>
+                  <Interior />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/configurator/summary"
+              element={
+                <AuthRoute>
+                  <Summary />
+                </AuthRoute>
+              }
+            />
+          </Route>
+        </Routes>
+      </FirebaseProvider>
+    </BrowserRouter>
   );
 }
 
